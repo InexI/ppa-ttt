@@ -95,4 +95,8 @@ public class Controller {
     public void changeForTwoPlayers() {
         comp = false;
     }
+
+    public void changeForGameWithComp() {
+        comp = true;
+    }
 }

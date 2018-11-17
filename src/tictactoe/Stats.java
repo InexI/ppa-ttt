@@ -2,6 +2,7 @@ package tictactoe;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 
 /**
@@ -13,6 +14,7 @@ public class Stats {
     int kolkoWins = 0;
 
     protected Calosc mainController;
+    protected boolean comp = true;
 
     public void setMainController(Calosc mainController) {
         this.mainController = mainController;
@@ -23,6 +25,10 @@ public class Stats {
 
     @FXML
     protected Label kolko;
+
+    @FXML
+    protected Button twoP;
+
 
     public void newGame(ActionEvent actionEvent) {
         mainController.restartGame();
@@ -42,7 +48,16 @@ public class Stats {
         kolko.setText("Gracz O: " + kolkoWins);
     }
 
-    public void twoPlayers(ActionEvent actionEvent) {
-        mainController.twoPlayersGame();
+
+    public void switchButton(ActionEvent actionEvent) {
+        if (comp) {
+            comp = false;
+            mainController.twoPlayersGame();
+            twoP.setText("Komputer");
+        }   else {
+            comp = true;
+            mainController.gameWithComp();
+            twoP.setText("Gra na 2");
+        }
     }
 }

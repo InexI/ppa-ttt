@@ -45,4 +45,8 @@ public class Calosc {
     public void twoPlayersGame() {
         boardController.changeForTwoPlayers();
     }
+
+    public void gameWithComp() {
+        boardController.changeForGameWithComp();
+    }
 }
