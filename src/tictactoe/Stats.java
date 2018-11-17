@@ -41,4 +41,8 @@ public class Stats {
         krzyzyk.setText("Gracz X: " + krzyzykWins);
         kolko.setText("Gracz O: " + kolkoWins);
     }
+
+    public void twoPlayers(ActionEvent actionEvent) {
+        mainController.twoPlayersGame();
+    }
 }

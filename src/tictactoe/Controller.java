@@ -25,6 +25,7 @@ public class Controller {
 
     protected boolean gameEnded;
     protected Board board;
+    protected boolean comp = true;
 
     public void initialize() {
         for (Node child : grid.getChildren()) {
@@ -39,8 +40,10 @@ public class Controller {
         if (!gameEnded) {
             if (board.canYouMakeAMove(row, column)) {
                 board.makeMove(row, column);
-                if (!checkVictoryShowAndRegister()) {
-                    board.makeComputerMove();
+                if (comp){
+                    if (!checkVictoryShowAndRegister()) {
+                        board.makeComputerMove();
+                    }
                 }
             }
             drawBoard();
@@ -87,5 +90,9 @@ public class Controller {
         gameEnded = false;
         board = new Board();
         drawBoard();
+    }
+
+    public void changeForTwoPlayers() {
+        comp = false;
     }
 }
