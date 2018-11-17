@@ -4,11 +4,11 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.VBox?>
 
-
-<VBox maxHeight="94.0" prefWidth="94.0" xmlns="http://javafx.com/javafx/8.0.152" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tictactoe.Stats">
+<VBox maxHeight="94.0" prefWidth="94.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tictactoe.Stats">
    <children>
-      <Label alignment="CENTER" text="Gracz X: 0" fx:id="krzyzyk" />
-      <Label alignment="CENTER" text="Gracz O: 0" fx:id="kolko" />
-      <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" text="Nowa gra" onAction="#newGame" />
+      <Label fx:id="krzyzyk" alignment="CENTER" text="Gracz X: 0" />
+      <Label fx:id="kolko" alignment="CENTER" text="Gracz O: 0" />
+      <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#newGame" text="Nowa gra" />
+      <Button fx:id="komp" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#newGame" text="Gra na 2" />
    </children>
 </VBox>
